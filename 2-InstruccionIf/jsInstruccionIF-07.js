@@ -1,8 +1,16 @@
+
 function mostrar()
 {
-	//tomo la edad  
-	alert("ok");
-	
+	var edad;
+	var miEstadoCivil; 
+
+	edad = txtIdEdad.value;
+	edad = parseInt(edad);
+	miEstadoCivil = estadoCivil.value;
 
 
-}//FIN DE LA FUNCIÓN
+	if (edad < 18 && miEstadoCivil != "Soltero") {
+
+		alert("Usted es muy pequeño para NO ser soltero.");
+	}
+}
