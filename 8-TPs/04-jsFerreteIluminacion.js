@@ -79,6 +79,7 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
     }
 
 }*/
+/*
 
 function CalcularPrecio () 
 {
@@ -103,7 +104,8 @@ function CalcularPrecio ()
         {
             if (marcaLamparas == "ArgentinaLuz")
             {
-                precio = precio - precio * 0.4;
+                precio = precio - precio * 0.4; 
+                //descuentoAplicar = 0.4
             } 
             else
             {
@@ -156,8 +158,107 @@ function CalcularPrecio ()
         txtIdprecioDescuento.value = precio + impuesto;
 
     }
-    else 
-    {
-        txtIdprecioDescuento.value = "$" + precio;
-    }
+    
 }
+*/
+
+function CalcularPrecio () 
+{
+    var marcaLamparas;
+    var precio;
+    var lamparas;
+    var impuesto;
+    var descuento;
+
+    marcaLamparas = Marca.value;
+    
+    lamparas = txtIdCantidad.value;
+    lamparas = parseInt(lamparas);
+    
+    precio = lamparas * 35;
+
+
+    if (lamparas > 5)
+    {
+        precio = precio/2;
+    }
+    else
+    {
+	    switch(lamparas)
+	    {
+		    case 5:
+		    
+                switch (marcaLamparas)
+                {
+                    case "ArgentinaLuz" :
+                    
+                            descuento = precio*0.4;
+                            precio = precio - descuento;
+                            break;
+                    
+                    default : 
+                    
+                        descuento = precio*0.3;
+                        precio = precio - descuento;
+                        break;
+                    
+
+                }  
+               
+		    break;
+		    
+		    case 4:
+                switch (marcaLamparas)
+                {
+                    case "ArgentinaLuz":
+                    case "FelipeLamparas":
+                        descuento = precio*0.25;
+                        precio = precio - descuento;
+                        break;
+                    
+                    default:
+                        descuento = precio*0.2
+                        precio = precio - descuento;
+                        break;
+                }
+		    
+			    
+            break;
+            
+            case 3:
+                switch (marcaLamparas)
+                {
+                    case "ArgentinaLuz":
+                        descuento = precio*0.15;
+                        precio = precio - descuento;
+                        break;
+                    case "FelipeLamparas":
+                        descuento = precio *0.1;
+                        precio = precio - descuento;
+                        break;
+                    default:
+                        descuento = precio*0.05;
+                        precio = precio - descuento;
+                        break;
+                    
+                }
+            
+        }
+       
+    }
+    if (precio > 120)
+    {
+        impuesto = precio * 0.10;
+
+        alert (`IIBB, usted pagó $ ${impuesto}`);
+        
+        txtIdprecioDescuento.value = precio + impuesto;
+
+    }
+    else
+    {
+        txtIdprecioDescuento.value = precio;
+    }
+    
+}
+
