@@ -242,6 +242,7 @@ function CalcularPrecio ()
                         break;
                     
                 }
+            break;
             
         }
        
