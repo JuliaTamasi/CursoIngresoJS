@@ -12,10 +12,10 @@ function mostrar()
 			{
 				case "Bariloche":
 					alert ("Se viaja");
-					break;
+				break;
 				default:
 					alert ("No se viaja");
-					break;
+				break;
 			}
 		break;
 		case "Verano":
@@ -24,10 +24,10 @@ function mostrar()
 				case "Mar del plata":
 				case "Cataratas":
 					alert("Se viaja");
-					break;
+				break;
 				default:
 					alert("No se viaja");
-					break;
+				break;
 			}
 		break;
 		case "Primavera":
@@ -35,18 +35,15 @@ function mostrar()
 			{
 				case "Bariloche":
 					alert("No se viaja");
-					break;
+				break;
 				default:
 					alert("Se viaja");
-					break;
+				break;
 			}
 		break;
 		default:
 			alert("se viaja");
 		break;
-			
-			
+				
 	}
-	
-
 }
