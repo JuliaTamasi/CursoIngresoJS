@@ -23,7 +23,7 @@ function mostrar()
 
 		contador++; //contador+=1
 
-		respuesta = confirm("¿Desea ingresar otro numero?")
+		respuesta = confirm("¿Desea ingresar otro numero?");
 
 	}
 
