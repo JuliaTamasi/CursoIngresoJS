@@ -11,7 +11,7 @@ function mostrar()
 	var primeraVez = true;
 	
 	//iniciar variables
-	banderaDelPrimero = "es el primero";
+	
 	respuesta = true;
 
 	
